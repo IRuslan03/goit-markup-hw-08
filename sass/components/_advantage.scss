@@ -1,0 +1,47 @@
+.advantege-section {
+    @extend %section;
+    padding-bottom: 0px;
+}
+
+.container {
+    @extend %container;
+}
+
+.advantage-list {
+    display: flex;
+    margin-right: -30px;
+}
+
+.advantage-titles {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.advantege-icon {
+    background: $team-back-color;
+    margin-bottom: 30px;
+    display: flex;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.advantage-item {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.advantage-explanations {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+}

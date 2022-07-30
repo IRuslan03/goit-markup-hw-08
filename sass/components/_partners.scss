@@ -1,0 +1,47 @@
+.partners-section {
+    @extend %section;
+}
+
+.partners-container {
+    @extend %container;
+}
+
+.headlines-partner {
+    @extend %h-two;
+}
+
+.partners-link {
+    fill: $icon-color;
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: $standart-border-radius;
+
+    transition-property: fill;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+
+    &:focus,
+    &:hover {
+        border: 1px solid #2196F3;
+        box-sizing: border-box;
+        border-radius: $standart-border-radius;
+        fill: $effect-color;
+    }
+}
+
+.partners-list {
+    display: flex;
+}
+
+.partners-item {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}

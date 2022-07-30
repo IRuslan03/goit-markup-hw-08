@@ -1,0 +1,190 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 448px;
+    text-align: left;
+    padding: 0;
+}
+
+.form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $main-color;
+    margin-bottom: 12px;
+}
+
+.form-group-field {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.125;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $secondary-color;
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+.form-field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: $main-color;
+    transition: fill;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+}
+
+.form-input {
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $standart-border-radius;
+    padding-left: 42px;
+    color: $secondary-color;
+    transition-property: border;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+}
+
+.form-textarea {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $standart-border-radius;
+    padding: 12px 16px;
+    color: var(--secondary-color);
+    margin: 0;
+    resize: none;
+    outline: none;
+
+    transition-property: border;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+
+    &:focus-within {
+        border: 1px solid $effect-color;
+    }
+}
+
+.form-field:focus-within>.input-icon {
+    fill: $effect-color;
+}
+
+.form-input:focus-within {
+    border: 1px solid #2196f3;
+}
+
+.form-textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-agreement-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-left: 24px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+}
+
+.form-agreement-link {
+    color: $effect-color;
+    text-decoration: underline;
+}
+
+.form-agreement-icon-check {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 15px;
+    opacity: 1;
+
+    transition: opacity;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+}
+
+
+.form-agreement-icon-checked {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 15px;
+    opacity: 0;
+
+    fill: $effect-color;
+
+    transition: opacity;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+}
+
+.checkbox:checked~.form-agreement-icon-check {
+    opacity: 0;
+}
+
+.checkbox:checked~.form-agreement-icon-checked {
+    opacity: 1;
+}
+
+.form-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+
+    color: var(--white-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: $effect-color;
+    border: none;
+    border-radius: $standart-border-radius;
+    cursor: pointer;
+
+    transition: background-color;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+
+}
+
+.form-submit-btn:hover {
+    background-color: $button-color-hover;
+}
+
+.hide {
+    @extend %hide;
+}

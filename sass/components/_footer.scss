@@ -1,0 +1,174 @@
+.footer-container {
+    @extend %container;
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-soc-network {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-icon-soc {
+    display: flex;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    fill: $white-color;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+
+    &:hover,
+    &:focus {
+        background-color: $effect-color;
+    }
+}
+
+.appeal {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-color;
+}
+
+.address {
+    font-style: normal;
+}
+
+.footer {
+    background-color: $second-back-color;
+    min-width: 1200px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer .logo {
+    display: inline-block;
+    color: $white-color;
+    margin-bottom: 20px;
+    margin-right: 0px;
+}
+
+.footer .title-white {
+    color: $white-color;
+
+    transition-property: color;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+}
+
+.footer .title-rgba {
+    color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+
+}
+
+.address .item {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.address .item:last-child {
+    margin-bottom: 0px;
+}
+
+.footer .item-address {
+    margin-right: 70px;
+
+    transition-property: color;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+}
+
+.footer .item-address :hover,
+.footer .item-address :focus {
+    color: $effect-color;
+}
+
+.footer-right-block {
+    margin-left: auto;
+    color: $white-color;
+}
+
+.footer-do-mail {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.subscription {
+    display: flex;
+    align-items: center;
+}
+
+.subscription-input {
+    display: flex;
+    align-items: center;
+    min-width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    margin-right: 12px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: $standart-border-radius;
+}
+
+.form-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: $white-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: $effect-color;
+    border: none;
+    border-radius: $standart-border-radius;
+    cursor: pointer;
+
+    transition: background-color;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+}
+
+.form-submit-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: $white-color;
+}
