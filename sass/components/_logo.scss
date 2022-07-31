@@ -1,13 +1,21 @@
 .logo {
+    display: block;
     font-family: $complementary-font;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.14;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     text-decoration: none;
-    color: #000000;
+    color: $main-color;
 }
 
 .logo__text {
     color: $effect-color;
+}
+
+.logo__footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    color: $white-color;
 }
