@@ -1,82 +1,146 @@
-.section-team {
-    @extend %section;
-    background-color: $team-back-color;
-}
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-.team-container {
-    @extend %container;
-}
-
-.team-list {
-    display: flex;
-}
-
-.team-item {
-    background-color: $white-color;
-    margin-right: 30px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-}
-
-.team-item:last-child {
-    margin-right: 0px;
-}
-
-.team-name {
-    margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(19 / 16);
-    text-align: center;
-    letter-spacing: 0.03em;
-}
-
-.team-position {
-    color: $secondary-color;
-    font-size: 16px;
-    line-height: calc(19 / 16);
-    text-align: center;
-    letter-spacing: 0.03em;
-}
-
-.team-write {
-    margin: 30px 0 16px 0;
-}
-
-.link-container {
-    margin: 0px 32px 30px 32px;
-}
-
-.social-link {
-    fill: $icon-color;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-
-    transition-property: background-color, fill;
-    transition-duration: $standart-transition-duration;
-    transition-timing-function: $standart-cubic-bezier;
-
-    &:hover {
-        background-color: $effect-color;
-        border-radius: 50%;
-        fill: $white-color;
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
     }
 }
 
-.team-social {
-    display: flex;
+.team {
+    background-color: $team-back-color;
 }
 
-.team-social-item {
-    margin-right: 10px;
+.team__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
 
-    &:last-child {
-        margin-right: 0px;
+    @media screen and (min-width:1200px) {
+        font-size: 36px;
+        line-height: 1.16;
+        margin-bottom: 50px;
+    }
+}
+
+.team__list {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+    }
+}
+
+.team__items {
+    @media screen and (max-width:767px) {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin: 15px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: 30px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.team__container-members {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    background-color: $white-color;
+
+    @media screen and (min-width:1200px) {
+        padding-bottom: 30px;
+    }
+}
+
+.team__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+
+}
+
+.team__text {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+.social-networks {
+    display: flex;
+    justify-content: center;
+}
+
+.social-networks__items {
+    margin-left: 10px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.social-networks__link {
+    display: inline-block;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    transition: transform,
+        background-color;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+
+
+    .social-networks__items:hover & {
+        background-color: $effect-color;
+    }
+
+    &:focus {
+        background-color: $effect-color;
+    }
+}
+
+.social-networks__icon {
+    fill: $icon-color;
+    width: 20px;
+    height: 20px;
+    transition: fill;
+    transition-duration: $standart-transition-duration;
+    transition-timing-function: $standart-cubic-bezier;
+
+
+    .social-networks__items:hover & {
+        fill: $white-color;
+    }
+
+    .social-networks__link:focus & {
+        fill: $white-color;
     }
 }
