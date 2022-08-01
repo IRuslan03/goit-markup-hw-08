@@ -40,17 +40,17 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    width: 450px;
+    max-width: 450px;
     height: 120px;
     border-radius: $standart-border-radius;
     background-color: $team-back-color;
 
     @media screen and (min-width:768px) {
-        width: 354px;
+        max-width: 354px;
     }
 
     @media screen and (min-width:1200px) {
-        width: 270px;
+        max-width: 270px;
     }
 }
 
@@ -63,11 +63,11 @@
 
     @media screen and (min-width:768px) and (max-width:1199px) {
         margin: 15px;
-        width: 354px;
+        max-width: 354px;
     }
 
     @media screen and (min-width:1200px) {
-        width: 270px;
+        max-width: 270px;
 
         &:not(:first-child) {
             margin-left: 30px;
