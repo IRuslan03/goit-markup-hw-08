@@ -1,162 +1,165 @@
-.section {
-    @extend %section;
-}
-
-.portfolio-container {
-    background-color: $white-color;
-}
-
-.filter-list {
-    display: flex;
-    justify-content: center;
-}
-
-.filter-item {
-    margin-right: 8px;
-
-    transition-property: box-shadow;
-    transition-duration: $standart-transition-duration;
-    transition-timing-function: $standart-cubic-bezier;
-
-    &:last-child {
-        margin-right: 0px;
-    }
-
-    &:hover {
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-            0px 1px 2px rgba(0, 0, 0, 0.08),
-            0px 2px 2px rgba(0, 0, 0, 0.12);
+.list-works {
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
     }
 }
 
-.button-filter {
-    padding: 6px 22px;
-    background-color: $team-back-color;
-    border-radius: $standart-border-radius;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(26 / 16);
-    letter-spacing: 0.03em;
-    color: $main-color;
-    cursor: pointer;
-
-    transition-property: box-shadow, color,
-        background-color;
-    transition-duration: $standart-transition-duration;
-    transition-timing-function: $standart-cubic-bezier;
-
-    &:hover {
-        color: $white-color;
-        background-color: $effect-color;
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-            0px 1px 2px rgba(0, 0, 0, 0.08),
-            0px 2px 2px rgba(0, 0, 0, 0.12);
-        border-radius: $standart-border-radius;
-    }
-}
-
-
-
-
-
-/* Cards */
-
-.cards-list {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card-item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    background: $white-color;
-
-    &:nth-child(3n+3) {
-        margin-right: 0px;
-    }
-
-    &:nth-last-child(-n+4) {
-        margin-bottom: 0px;
-    }
-}
-
-.card-href {
-    display: block;
-
-    transition-property: box-shadow;
-    transition-duration: $standart-transition-duration;
-    transition-timing-function: $standart-cubic-bezier;
-
-    &:hover .overlay {
-        transform: translateY(0);
-    }
+.list-works__items {
 
     &:hover {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
+
+        transition: box-shadow;
+        transition-duration: $standart-transition-duration;
+        transition-timing-function: $standart-cubic-bezier;
+
+    }
+
+    @media screen and (max-width:767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        margin: 15px;
+        width: 354px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 370px;
+    }
+
+}
+
+.img {
+    @media screen and (min-width:1200px) {
+        width: 370px;
     }
 }
 
-.img-thumb {
-    position: relative;
-    overflow: hidden;
+.list-works__container-texno {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        height: 146.91px;
+    }
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
+.list-works__container {
+    padding: 20px 24px;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    letter-spacing: 0.06em;
 
-    transition-property: transform;
+}
+
+.list-works__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+
+}
+
+.list-works__text {
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+.list-button {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media screen and (max-width:767px) {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width:768px) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+    }
+}
+
+.list-button__items {
+    margin-left: 9px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    @media screen and (max-width:767px) {
+        &:nth-child(4) {
+            margin-left: 0;
+        }
+
+        &:nth-child(-n + 3) {
+            margin-bottom: 15px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        margin-left: 8px;
+
+    }
+}
+
+.list-button__button {
+    padding: 6px 22px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+
+    background-color: $team-back-color;
+    color: $main-color;
+    border-radius: $standart-border-radius;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    transition: background-color,
+        box-shadow;
     transition-duration: $standart-transition-duration;
     transition-timing-function: $standart-cubic-bezier;
+
+    &:hover,
+    &:focus {
+        background-color: $effect-color;
+        color: $white-color;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }
 
+.thumb {
+    position: relative;
+    overflow: hidden;
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $effect-color;
+        transform: translateY(101%);
+        transition: transform;
+        transition-duration: $standart-transition-duration;
+        transition-timing-function: $standart-cubic-bezier;
+    }
 
-.p-overlay {
-    padding: 64px 24px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-}
-
-
-
-
-.card-name {
-    margin-bottom: 4px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: calc(36 / 18);
-    letter-spacing: 0.06em;
-    color: $main-color;
-}
-
-.card-filter {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    letter-spacing: 0.03em;
-    color: $secondary-color;
-}
-
-.card-write {
-    padding: 20px 24px;
-    background: var(--white-color);
-    border-bottom: 1px solid $border-color;
-    border-right: 1px solid $border-color;
-    border-left: 1px solid $border-color;
-    box-sizing: border-box;
+    &:hover::before,
+    &:focus::before {
+        transform: translateY(0);
+    }
 }

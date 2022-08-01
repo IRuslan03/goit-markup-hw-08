@@ -1,174 +1,268 @@
-.footer-container {
-    @extend %container;
-    display: flex;
-    align-items: baseline;
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $second-back-color;
 }
 
-.footer-soc-network {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
+.footer__container {
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: center;
+    }
 
-.footer-icon-soc {
-    display: flex;
-    margin-right: 10px;
+    @media screen and (max-width:1199px) {
+        flex-wrap: wrap;
+    }
 
-    &:last-child {
-        margin-right: 0px;
+    @media screen and (min-width:1200px) {
+        align-items: center;
     }
 }
 
-.footer-icon {
-    width: 20px;
-    height: 20px;
-    fill: $white-color;
+.footer__container-address {
+    width: 232px;
+
+    @media screen and (max-width:767px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
+
 }
 
-.footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition-property: background-color;
-    transition-duration: $standart-transition-duration;
-    transition-timing-function: $standart-cubic-bezier;
+.footer__container-social-network {
+    width: 206px;
 
-    &:hover,
-    &:focus {
-        background-color: $effect-color;
+    @media screen and (max-width:767px) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-left: 165px;
+        margin-top: 5px;
+    }
+
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: 70px;
+        margin-top: 0;
     }
 }
 
-.appeal {
-    margin-top: 0px;
+.footer__text-invitations {
     margin-bottom: 20px;
     font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white-color;
 }
 
-.address {
-    font-style: normal;
+.footer__list {
+    display: flex;
 }
 
-.footer {
-    background-color: $second-back-color;
-    min-width: 1200px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+.footer__items {
+    margin-left: 10px;
+
+    &:first-child {
+        margin-left: 0;
+    }
 }
 
-.footer .logo {
+.footer__link {
     display: inline-block;
-    color: $white-color;
-    margin-bottom: 20px;
-    margin-right: 0px;
-}
-
-.footer .title-white {
-    color: $white-color;
-
-    transition-property: color;
-    transition-duration: $standart-transition-duration;
-    transition-timing-function: $standart-cubic-bezier;
-}
-
-.footer .title-rgba {
-    color: rgba(255, 255, 255, 0.6);
-
-    transition-property: color;
+    text-align: center;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform,
+        background-color;
     transition-duration: $standart-transition-duration;
     transition-timing-function: $standart-cubic-bezier;
 
+    .footer__items:hover & {
+        background-color: $effect-color;
+    }
+
+    &:focus {
+        background-color: $effect-color;
+    }
 }
 
-.address .item {
+.footer__social-network-icon {
+    width: 20px;
+    height: 20px;
+    fill: $white-color;
+}
+
+.form-footer {
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        width: 570px;
+        margin-left: 93px;
+    }
+
+}
+
+.form-footer__field {
+    @media screen and (max-width:1199px) {
+        margin-bottom: 20px;
+    }
+}
+
+.form-footer__label {
     display: block;
-    margin-bottom: 9px;
-}
 
-.address .item:last-child {
-    margin-bottom: 0px;
-}
-
-.footer .item-address {
-    margin-right: 70px;
-
-    transition-property: color;
-    transition-duration: $standart-transition-duration;
-    transition-timing-function: $standart-cubic-bezier;
-}
-
-.footer .item-address :hover,
-.footer .item-address :focus {
-    color: $effect-color;
-}
-
-.footer-right-block {
-    margin-left: auto;
-    color: $white-color;
-}
-
-.footer-do-mail {
-    display: block;
+    font-weight: 700;
+    line-height: 1.14;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    color: $white-color;
 }
 
-.subscription {
-    display: flex;
-    align-items: center;
-}
-
-.subscription-input {
-    display: flex;
-    align-items: center;
-    min-width: 358px;
+.form-footer__input {
+    display: block;
+    width: 450px;
     height: 50px;
+    margin-top: 20px;
     padding-left: 16px;
-    margin-right: 12px;
-    font-size: 16px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: $standart-border-radius;
+    background-color: $second-back-color;
+    color: $white-color;
+
+    @media screen and (min-width:1200px) {
+        width: 358px;
+    }
 }
 
-.form-submit-btn {
+.button-footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    align-self: flex-end;
     width: 200px;
     height: 50px;
-    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+    padding-left: 29px;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.875;
+    line-height: 1.87;
     letter-spacing: 0.06em;
-    color: $white-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: $effect-color;
-    border: none;
-    border-radius: $standart-border-radius;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: $white-color;
     cursor: pointer;
-
     transition: background-color;
     transition-duration: $standart-transition-duration;
     transition-timing-function: $standart-cubic-bezier;
+
+    &:hover,
+    &:focus {
+        background-color: $button-color-hover;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 0;
+        margin-left: 12px;
+    }
 }
 
-.form-submit-icon {
-    width: 24px;
-    height: 24px;
+.button-footer-icon {
     margin-left: 10px;
     fill: $white-color;
+}
+
+.address {
+    width: 232px;
+
+    @media screen and (max-width:1199px) {
+        margin-bottom: 60px;
+    }
+}
+
+.address__text {
+    margin-bottom: 9px;
+    font-style: normal;
+    line-height: 1.71;
+    color: $white-color;
+
+}
+
+.address__link {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-style: normal;
+    line-height: 1.71;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color;
+
+    .address {
+        width: 232px;
+
+        @media screen and (max-width:1199px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .address__text {
+        margin-bottom: 9px;
+        font-style: normal;
+        line-height: 1.71;
+        color: $white-color;
+
+    }
+
+    .address__link {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-style: normal;
+        line-height: 1.71;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.6);
+        transition: color;
+
+        transition-duration: $standart-transition-duration;
+        transition-timing-function: $standart-cubic-bezier;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover,
+        &:focus {
+            color: $effect-color;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+        color: $effect-color;
+    }
 }
