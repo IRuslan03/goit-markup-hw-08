@@ -310,6 +310,10 @@ button {
   border: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container, .task-container {
   width: 1200px;
   padding-left: 15px;
@@ -2045,6 +2049,7 @@ body {
 }
 
 .list-works__text {
+  color: #757575;
   font-size: 16px;
   line-height: 1.87;
 }
@@ -2135,67 +2140,55 @@ body {
   overflow: hidden;
 }
 
-.thumb::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #2196F3;
-  -webkit-transform: translateY(101%);
-          transform: translateY(101%);
-  -webkit-transition: -webkit-transform;
-  transition: -webkit-transform;
-  transition: transform;
-  transition: transform, -webkit-transform;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: 0.4, 0, 0.2, 1;
-          transition-timing-function: 0.4, 0, 0.2, 1;
-}
-
-.thumb:hover::before, .thumb:focus::before {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .overlay {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: -webkit-transform;
-  transition: -webkit-transform;
-  transition: transform;
-  transition: transform, -webkit-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: 0.4, 0, 0.2, 1;
           transition-timing-function: 0.4, 0, 0.2, 1;
-}
-
-.thumb:hover .overlay {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .overlay__text {
-  width: 322px;
+  padding: 64px 24px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 28px;
+  letter-spacing: 0.03em;
   color: #FFFFFF;
+}
+
+.card-href {
+  display: block;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: 0.4, 0, 0.2, 1;
+          transition-timing-function: 0.4, 0, 0.2, 1;
+}
+
+.card-href:hover .overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card-href:hover {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /*# sourceMappingURL=main.css.map */
