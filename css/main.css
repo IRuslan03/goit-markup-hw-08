@@ -480,6 +480,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .menu-container-two {
+    margin-left: auto;
+  }
+}
+
 .menu-container__button {
   position: absolute;
   top: 8px;
@@ -941,6 +947,29 @@ body {
 
 .hero .hero-btn:focus, .hero .hero-btn:hover {
   background-color: #188CE8;
+}
+
+.hero__container {
+  width: 480px;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    width: 1200px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .backdrop {

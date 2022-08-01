@@ -57,6 +57,12 @@
     justify-content: space-between;
     margin-left: 88px;
   }
+
+  @media screen and (min-width:768px) {
+    margin-left: auto;
+  }
+
+
 }
 
 .menu-container__button {
