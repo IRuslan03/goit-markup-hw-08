@@ -322,6 +322,18 @@ a {
   margin-right: auto;
 }
 
+.team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .headlines {
   margin-bottom: 50px;
   font-weight: 700;
@@ -1418,18 +1430,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
-}
-
-.section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
 }
 
 .team {
