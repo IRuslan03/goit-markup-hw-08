@@ -16,24 +16,43 @@
     <div class="container header__container">
         
         <a href="./index.html" class="logo"><span class="logo__text">Web</span>Studio</a>
-        <button 
-        type="button" 
-        class="header__button"
-        aria-expanded="false"
-        aria-controls="menu-container"
-        data-menu-open>
-        <svg width="40" height="40">
-            <use class="header__icon-open" href="./images/icons.svg#menu-open"></use>
-        </svg>
-        </button>
-        
-        <div class="menu-container" id="menu-container" data-menu>
-            <div class="menu-container-two">
-                <button type="button" class="menu-container__button" aria-expanded="false" aria-controls="menu-container" data-menu-close>
-                    <svg width="40" height="40">
-                        <use class="header__icon-close" href="./images/icons.svg#close"></use>
-                    </svg>
-                </button>
+         <button
+            type="button"
+            class="menu-backdrop__button"
+            aria-expanded="false"
+            aria-controls="menu-backdrop__container"
+            data-menu-open=""
+          >
+            <svg
+              class="menu-backdrop__menu-icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобтльного меню"
+            >
+              <use class="menu-backdrop__icon-menu" href="./images/icons.svg#menu-open"></use>
+            </svg>
+          </button>
+          <div class="menu-backdrop" id="nav__menu-container" data-menu>
+            <div class="menu-backdrop__container">
+              <button
+                type="button"
+                class="menu-backdrop__button menu-backdrop__button--cross"
+                aria-expanded="false"
+                aria-controls="menu-backdrop__container"
+                data-menu-close
+              >
+                <svg
+                  class="menu-backdrop__menu-icon"
+                  width="40"
+                  height="40"
+                  aria-label="Переключатель мобтльного меню"
+                >
+                  <use
+                    class="menu-backdrop__icon-cross"
+                    href="./images/icons.svg#close"
+                  ></use>
+                </svg>
+              </button>
         <nav class="header__nav">
             <ul class="list-nav">
                 <li class="list-nav__items">

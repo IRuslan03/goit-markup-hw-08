@@ -1,62 +1,105 @@
-.menu-container {
-
-  @media screen and (max-width:767px) {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-
-    width: 100vw;
-    height: 100vh;
-    background-color: $white-color;
-    overflow-y: scroll;
-    z-index: 2;
-
-    &.is-open {
-      display: flex;
-
-
-    }
-
-  }
-
-}
-
-.menu-container-two {
-  @media screen and (max-width:767px) {
-    position: relative;
-    width: 480px;
-    padding-top: 48px;
-    padding-right: 83px;
-    padding-bottom: 48px;
-    padding-left: 40px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media screen and (min-width:768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.menu-container__button {
-  position: absolute;
-  top: 8px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  margin-left: auto;
-  padding: 0;
+.menu-backdrop {
+  display: flex;
   background-color: $white-color;
-  border: 1px solid transparent;
 
-  @media screen and (min-width:768px) {
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @media screen and (max-width: 767.98px) {
+    & {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transform: translateX(100%);
+      transition: transform;
+      transition-duration: $standart-transition-duration;
+      transition-timing-function: $standart-cubic-bezier;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      flex-grow: 2;
+    }
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    & {
+      z-index: 2;
+    }
+  }
+}
+
+.menu-backdrop__container {
+  display: flex;
+
+  @media screen and (max-width: 767.98px) {
+    & {
+      position: relative;
+      align-items: left;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      flex-grow: 2;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    & {
+      width: 100%;
+      flex-direction: column;
+      padding: 48px 40px;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+.menu-backdrop__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.menu-backdrop__button--cross {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  @media screen and (min-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.menu-backdrop__icon-cross {
+  display: none;
+}
+
+.is-open {
+  .menu-backdrop__icon-cross {
+    display: block;
+  }
+
+  .menu-backdrop__icon-menu {
     display: none;
   }
 }
