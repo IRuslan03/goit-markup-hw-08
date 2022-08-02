@@ -9,12 +9,7 @@
     transition: opacity;
     transition-duration: $standart-transition-duration;
     transition-timing-function: $standart-cubic-bezier;
-
-    @media screen and (max-width: 1199px) {
-        & {
-            z-index: 3;
-        }
-    }
+    z-index: 1;
 }
 
 .is-hidden {

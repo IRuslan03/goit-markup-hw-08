@@ -983,12 +983,7 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: 0.4, 0, 0.2, 1;
           transition-timing-function: 0.4, 0, 0.2, 1;
-}
-
-@media screen and (max-width: 1199px) {
-  .backdrop {
-    z-index: 3;
-  }
+  z-index: 1;
 }
 
 .is-hidden {
@@ -1082,6 +1077,7 @@ body {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 12px;
+  color: #212121;
 }
 
 .modal-form__field {
