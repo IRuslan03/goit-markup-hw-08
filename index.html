@@ -86,56 +86,77 @@
                  ЕФЕКТИВНІ РІШЕННЯ  ДЛЯ <br> ВАШОГО БІЗНЕСУ
              </h1>
                      <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
-            <div class="backdrop backdrop__is-hidden" data-modal>
-                <div class="modal">
-                    <button type="button" class="button-modal-close data-modal-close" data-modal-close>
-                        <svg width="11" height="11" class="button-modal-close__icon">
-                            <use href="./images/icons.svg#close"></use>
-                        </svg>
-                    </button >
-                     <form class="form" name="data-transfer" autocomplete="on">
-                     <strong class="form-title">Залиште свої дані, ми вам передзвонимо</strong>
-                     <div role="group" class="form-group-field">
-                        <label class="form-label" for="user-name">Ім'я</label>
-                     <div class="form-field">
-                        <svg class="input-icon">
-                        <use href="./images/icons.svg#person-black"></use>
-                        </svg>
-                        <input class="form-input" type="text" name="user-name" id="user-name" minlength="3" placeholder=" " required="" autofocus="">
-                     </div>
-                     <label class="form-label" for="user-phone">Телефон</label>
-                     <div class="form-field">
-                         <svg class="input-icon">
-                         <use href="./images/icons.svg#phone-black"></use>
-                         </svg>
-                         <input class="form-input" type="tel" name="user-phone" id="user-phone" pattern="\+?[0-9\s\-\(\)]+" placeholder=" " required="">
-                     </div>
-                     <label class="form-label" for="user-email">Пошта</label>
-                     <div class="form-field">
-                         <svg class="input-icon">
-                         <use href="./images/icons.svg#email-black"></use>
-                         </svg>
-                         <input class="form-input" type="email" name="user-email" id="user-email" placeholder=" " required="">
-                     </div>
-                         <label class="form-label" for="user-notes">Коментар</label>
-                         <textarea class="form-textarea" name="user-notes" id="user-notes" rows="3" placeholder="Введіть текст"></textarea>
-                     </div>
-                         <label class="form-agreement-label">
-                         <input class="checkbox hide" type="checkbox" name="user-agreement" required="">
-                           Погоджуюся з розсилкою та приймаю&nbsp;
-                         <a class="form-agreement-link" href="#">Умови договору</a>
-                         <svg class="form-agreement-icon-check">
-                             <use href="./images/icons.svg#icon-form-check"></use>
-                         </svg>
-                         <svg class="form-agreement-icon-checked">
-                             <use href="./images/icons.svg#icon-form-checked"></use>
-                         </svg>
-                         </label>
-                             <button class="form-submit-btn" type="submit">Відправити</button>
-                     </form>
-                     </div>
-             </div>
-             </div>
+            <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__close-btn" type="button" data-modal-close>
+          <svg class="modal__close-btn-icon" width="18" height="18">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__wrap">
+          <b class="modal__title">Оставьте свои данные, мы вам перезвоним</b>
+          <form class="modal-form">
+            <div class="modal-form__field">
+              <label for="name" class="modal-form__label">Имя</label>
+              <input
+                type="text"
+                minlength="2"
+                class="modal-form__input"
+                id="name"
+                placeholder=" "
+                required
+                autofocus
+              />
+              <svg class="modal-form__icon" width="18" height="18">
+                <use href="./images/icons.svg#person-black"></use>
+              </svg>
+            </div>
+            <div class="modal-form__field">
+              <label for="phone" class="modal-form__label">Телефон</label>
+              <input
+                type="tel"
+                pattern="\+?[0-9\s\-\(\)]+"
+                class="modal-form__input"
+                id="phone"
+                placeholder=" "
+                required
+              />
+              <svg class="modal-form__icon" width="18" height="18">
+                <use href="./images/icons.svg#phone-black"></use>
+              </svg>
+            </div>
+            <div class="modal-form__field">
+              <label for="email" class="modal-form__label">Почта</label>
+              <input type="email" class="modal-form__input" id="email" placeholder=" " required />
+              <svg class="modal-form__icon" width="18" height="18">
+                <use href="./images/icons.svg#email-black"></use>
+              </svg>
+            </div>
+            <div class="modal-form__field">
+              <label for="comment" class="modal-form__label">Комментарий</label>
+              <textarea
+                type="text"
+                class="modal-form__input modal-form__input--textarea"
+                id="comment"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+            <div class="checkbox">
+              <label class="checkbox__label">
+                <input type="checkbox" class="checkbox__input" required />Соглашаюсь с рассылкой и
+                принимаю&nbsp
+                <a href="#" class="checkbox__link">Условия договора</a>
+                <span class="checkbox--no-checked"></span>
+                <span class="checkbox--checked">
+                  <svg class="checkbox__icon" width="16" height="15">
+                    <use href="./images/icons.svg#checkbox"></use></svg></span
+              ></label>
+            </div>
+            <button type="submit" class="main-button main-button--form">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
          </section>
          <!--Переваги нашої фірми-->
           <section class="section advantege-section">

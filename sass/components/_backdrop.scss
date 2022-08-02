@@ -6,14 +6,18 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-
     transition: opacity;
     transition-duration: $standart-transition-duration;
     transition-timing-function: $standart-cubic-bezier;
-    z-index: 1;
+
+    @media screen and (max-width: 1199px) {
+        & {
+            z-index: 3;
+        }
+    }
 }
 
-.backdrop__is-hidden {
+.is-hidden {
     opacity: 0;
     pointer-events: none;
 }
