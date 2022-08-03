@@ -577,7 +577,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .header__nav {
-    margin-bottom: 302px;
+    margin-bottom: auto;
   }
 }
 
@@ -1348,6 +1348,14 @@ body {
   color: #757575;
 }
 
+.hide {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: -1px;
+}
+
 .task-section {
   display: none;
 }
@@ -1356,6 +1364,7 @@ body {
   .task-section {
     display: block;
     padding-top: 0;
+    padding-bottom: 94px;
   }
 }
 
@@ -1699,7 +1708,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .welcome {
-    margin-right: 86px;
+    margin-right: auto;
+    margin-left: 70px;
   }
 }
 
